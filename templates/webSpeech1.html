@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Voice Controlled Notes App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		  <!-- google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+        <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/magnific-popup.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/owl.carousel.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/owl.carousel.theme.min.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/ionicons.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+    </head>
+    <body>
+	    
+		    <!-- Site Header -->
+        <div class="site-header-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="/home"><img src="{{url_for('static', filename='images/logo.png')}}" alt="logo"></a>
+                    </div>
+                     <!--
+                    <div class="col-sm-3 col-sm-offset-3 text-right">
+                        <span class="ion-android-cart"></span> 0 
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-robot" type="button">Search</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </form>
+                    </div> 
+                    -->
+                </div>
+            </div>
+        </div>
+        
+    <!-- Header -->
+
+        <section id="header" class="main-header shop-header inner-header">
+            <div class="container">
+
+                <div class="row">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav-bar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="site-nav-bar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/home">Home</a></li>
+                                <li class="active"><a href="/about">About</a></li>
+                                <li><ul class="nav navbar-nav">
+                                      <li class="">
+                                        <a class="nav navbar-nav" data-toggle="dropdown" href="#">
+                                            Services
+                                            <b class="caret"></b>
+                                         </a>
+                                        <ul class="dropdown-menu">
+                                          <li> <a href="/webSpeech">web speech</a></li>
+                                          <li> <a href="#">Hospital</a></li>
+                                        </ul>
+                                      </li>
+                                </ul></li>
+                                
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+                
+                <div class="intro row">
+                    <div class="overlay"></div>
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Web Speech</li>
+                        </ol>
+                    </div>
+                </div> <!-- /.intro.row -->
+            </div> <!-- /.container -->
+            <div class="nutral"></div>
+        </section> <!-- /#header -->
+
+		
+		
+		
+        <div class="container1">
+
+            <h1>Voice Controlled Notes App</h1>
+            <p class="page-description">A tiny app that allows you to take notes by recording your voice</p>
+            <p><!--<a class="tz-link" href="https://tutorialzine.com/2017/08/converting-from-speech-to-text-with-javascript"></a> --></p>
+
+            <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+
+            <div class="app"> 
+                <h3>Add New Note</h3>
+                <div class="input-single">
+                    <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+                </div>         
+                <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+                <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+                <button id="save-note-btn" title="Save Note">Save Note</button>   
+                <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                
+                <h3>My Notes</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any notes.</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='js/scriptSpeech.js')}}"></script>
+
+        <!-- Only used for the demos ads. Please ignore and remove. --> 
+        <script src="https://cdn.tutorialzine.com/misc/enhance/v3.js" async></script>
+
+    </body>
+</html>
+
+
